@@ -1,0 +1,39 @@
+{
+  "name": "proxy",
+  "version": "1.0.0",
+  "author": "Marcel Bruckner",
+  "summary": "Simple Nginx proxy",
+  "license": "",
+  "source": "https://github.com:m-bruckner/proxy.git",
+  "project_page": "https://github.com/m-bruckner/proxy",
+  "issues_url": "https://github.com/m-bruckner/proxy/issues",
+  "dependencies": [
+  
+  ],
+  "data_provider": null,
+  "tags": [
+    "nginx"
+  ],
+  "requirements": [
+    {
+      "name": "puppet"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian"
+    },
+    {
+      "operatingsystem": "Ubuntu"
+    },
+    {
+      "operatingsystem": "CentOS"
+    },
+    {
+      "operatingsystem": "RedHat"
+    }
+    {
+      "operatingsystem": "Fedora"
+    }
+  ]
+}
