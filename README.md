@@ -1,4 +1,4 @@
-# proxy
+# Proxy module for puppet
 
 #### Table of Contents
 
