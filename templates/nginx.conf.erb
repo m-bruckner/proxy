@@ -38,7 +38,8 @@ http {
 
     server {
         listen       <%= @port_http %>;
-        server_name  <%= @fqdn %>;
+	server_name  <%= @fqdn %>;
+	resolver     8.8.8.8;
         root         <%= @docroot %>;
 
 	location / {
