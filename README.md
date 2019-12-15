@@ -25,4 +25,5 @@ To adjust the nginx configuration settings, you can modify the following two
 files:
 
 proxy/manifests/config.pp
+
 proxy/templates/nginx.conf.erb
