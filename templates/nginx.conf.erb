@@ -34,14 +34,6 @@ http {
 
     include /etc/nginx/conf.d/*.conf;
 
-    upstream first_backend_https {
-        server <%= @first_backend_https %> ;
-    }
-
-    upstream second_backend_https {
-        server <%= @second_backend_https %> ;
-    }
-
     # FORWARD PROXY
 
     server {
@@ -69,14 +61,14 @@ http {
         ssl_prefer_server_ciphers <%= @ssl_prefer_server_ciphers %>;
 
 	location = / {
-	  proxy_pass https://first_backend_https;
+	  proxy_pass https://<%= @first_backend_https %>/;
 	  proxy_set_header Host            $host;
           proxy_set_header X-Real-IP       $remote_addr;
           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         }
 
 	location = /resoure2 {
-          proxy_pass https://second_backend_https;
+          proxy_pass https://<%= @second_backend_https %>/;
 	  proxy_set_header Host            $host;
           proxy_set_header X-Real-IP       $remote_addr;
           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
